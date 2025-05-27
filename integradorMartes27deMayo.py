@@ -6,7 +6,7 @@ sumaNotas = 0
 ListaDePromedios = []
 
 cantidadDeAlumnos = int(input("Cantidad de alumnos: "))
-while cantidadDeAlumnos < 0:
+while cantidadDeAlumnos <= 0:
     print("Cantidad de alumnos no valida")
     cantidadDeAlumnos = int(input("Cantidad de alumnos: "))
 
@@ -23,7 +23,7 @@ for i in range(cantidadDeAlumnos):
     print("Ingrese las notas del alumno (1 a 10): ")
     for i in range(3):
         nota = int(input(f"Nota {i+1}: "))
-        while nota < 0 or nota > 10:
+        while nota < 1 or nota > 10:
             print("Nota no valida")
             nota = int(input(f"Nota {i+1}: "))
         sumaNotas += nota
