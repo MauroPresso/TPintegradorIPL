@@ -2,7 +2,6 @@ import os
 os.system("cls")
 
 # Programa principal
-sumaNotas = 0
 ListaDePromedios = []
 
 cantidadDeAlumnos = int(input("Cantidad de alumnos: "))
@@ -21,6 +20,7 @@ for i in range(cantidadDeAlumnos):
     codigoDeMateria = (i+1)*100
 
     print("\nIngrese las notas del alumno (1 a 10): ")
+    sumaNotas = 0
     for i in range(3):
         nota = int(input(f"Nota {i+1}: "))
         while nota < 1 or nota > 10:
