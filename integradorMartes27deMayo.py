@@ -42,6 +42,7 @@ for i in range(cantidadDeAlumnos):
     print(f"Tipo de modalidad: {tipoDeModalidad}")
     print(f"Id: {id}")
     input("\nIngrese cualquier tecla para continuar...")
+    os.system("cls")
 
 print("\nLISTA DE PROMEDIOS:")
 for i in range(cantidadDeAlumnos):
