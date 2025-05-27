@@ -15,12 +15,12 @@ for i in range(cantidadDeAlumnos):
 
     id = i + 1
 
-    nombre = input("Nombre del alumno: ").capitalize()
+    nombre = input("\nNombre del alumno: ").capitalize()
     apellido = input("Apellido del alumno: ").upper()
     
     codigoDeMateria = (i+1)*100
 
-    print("Ingrese las notas del alumno (1 a 10): ")
+    print("\nIngrese las notas del alumno (1 a 10): ")
     for i in range(3):
         nota = int(input(f"Nota {i+1}: "))
         while nota < 1 or nota > 10:
@@ -30,7 +30,7 @@ for i in range(cantidadDeAlumnos):
     promedio = sumaNotas / 3
     ListaDePromedios.append(promedio) 
 
-    tipoDeModalidad = input("Tipo de modalidad (V/P/M): ").upper()
+    tipoDeModalidad = input("\nTipo de modalidad (V/P/M): ").upper()
     while tipoDeModalidad not in ["V", "P", "M"]:
         print("Tipo de modalidad no valida")
         tipoDeModalidad = input("Tipo de modalidad (V/P/M): ").upper()
