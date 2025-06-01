@@ -83,17 +83,61 @@ for i in range(cantidadDeAlumnos):
     else:
         modalidad = "Mixta"
 
+    # Definiendo aula y horario.
+    if modalidad == "Presencial":
+        if materia == "Introducción al pensamiento lógico":
+            aula = "1"
+            horario = "Lunes 19:00 a 21:00"
+        elif materia == "Sistemas de computación":
+            aula = "8"
+            horario = "Jueves 20:30 a 22:00"
+        elif materia == "Matemática":
+            aula = "12"
+            horario = "Viernes 19:00 a 21:00"
+        else: # materia == "Inglés"
+            aula = "15"
+            horario = "Martes 19:00 a 20:30"
+    elif modalidad == "Virtual":
+        if materia == "Introducción al pensamiento lógico":
+            aula = "Zoom"
+            horario = "Lunes 19:00 a 21:00"
+        elif materia == "Sistemas de computación":
+            aula = "Meet"
+            horario = "Jueves 20:30 a 22:00"
+        elif materia == "Matemática":
+            aula = "Meet"
+            horario = "Viernes 19:00 a 21:00"
+        else: # materia == "Inglés"
+            aula = "Zoom"
+            horario = "Martes 19:00 a 20:30"
+    else: # modalidad == "Mixta"
+        if materia == "Introducción al pensamiento lógico":
+            aula = "Zoom"
+            horario = "Miércoles 19:00 a 20:40"
+        elif materia == "Sistemas de computación":
+            aula = "8"
+            horario = "Lunes 19:00 a 21:00"
+        elif materia == "Matemática":
+            aula = "12"
+            horario = "Miércoles 21:00 a 22:40"
+        else: # materia == "Inglés"
+            aula = "Zoom"
+            horario = "Jueves 19:00 a 20:30"
+        
+
     print("\nDATOS DEL ALUMNO:")
     print(f"Nombre: {nombre} {apellido}")
+    print(f"Id: {id}")
+    print(f"Modalidad: {modalidad}")
     print(f"Materia: {materia}")
     print(f"Profesor: {profesor}")
+    print(f"Aula: {aula}")
+    print(f"Horario: {horario}")
     print(f"Promedio: {promedio}")
     print(f"Condicion: {condicion}")
     print(f"Defensa: {defensa}")
     print(f"Examen: {examen}")
     print(f"Fecha: {fecha}")
-    print(f"Modalidad: {modalidad}")
-    print(f"Id: {id}")
     input("\nIngrese cualquier tecla para continuar...")
     os.system("cls")
 
