@@ -11,13 +11,15 @@ while cantidadDeAlumnos <= 0:
 
 print("\nIngrese los datos de los alumnos: ")
 for i in range(cantidadDeAlumnos):
-
     id = i + 1
 
     nombre = input("\nNombre del alumno: ").capitalize()
     apellido = input("Apellido del alumno: ").upper()
     
-    codigoDeMateria = (i+1)*100
+    codigoDeMateria = int(input("Ingrese el código de la materia\n100: Introducción al pensamiento lógico\n200: Sistemas de computación\n300: Matemática\n400: Inglés\nIngrese aquí:\t"))
+    while codigoDeMateria not in [100, 200, 300, 400]:
+        print("Dato erroneo. Intente nuevamente")
+        codigoDeMateria = int(input("Ingrese el código de la materia\n100: Introducción al pensamiento lógico\n200: Sistemas de computación\n300: Matemática\n400: Inglés\nIngrese aquí:\t"))
 
     print("\nIngrese las notas del alumno (1 a 10): ")
     sumaNotas = 0
@@ -34,6 +36,18 @@ for i in range(cantidadDeAlumnos):
     while tipoDeModalidad not in ["V", "P", "M"]:
         print("Tipo de modalidad no valida")
         tipoDeModalidad = input("Tipo de modalidad (V/P/M): ").upper()
+
+    # GENERANDO DATOS.
+
+    if codigoDeMateria == 100:
+        materia = "Introducción al pensamiento lógico"
+    elif codigoDeMateria == 200:
+        materia = "Sistemas de computación"
+    elif codigoDeMateria == 300:
+        materia = "Matemática"
+    else: # codigoDeMateria == 400
+        materia = "Inglés"
+    
 
     print("\nDATOS DEL ALUMNO:")
     print(f"Nombre: {nombre} {apellido}")
