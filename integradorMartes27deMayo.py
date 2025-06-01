@@ -23,7 +23,7 @@ for i in range(cantidadDeAlumnos):
 
     print("\nIngrese las notas del alumno (1 a 10): ")
     sumaNotas = 0
-    for i in range(3):
+    for i in range(3): # Son 3 notas.
         nota = int(input(f"Nota {i+1}: "))
         while nota < 1 or nota > 10:
             print("Nota no valida")
@@ -41,13 +41,39 @@ for i in range(cantidadDeAlumnos):
 
     if codigoDeMateria == 100:
         materia = "Introducción al pensamiento lógico"
+        profesor = "Juan Perez"
     elif codigoDeMateria == 200:
         materia = "Sistemas de computación"
+        profesor = "Andrea Garrido"
     elif codigoDeMateria == 300:
         materia = "Matemática"
+        profesor = "Sebastián Prost"
     else: # codigoDeMateria == 400
         materia = "Inglés"
+        profesor = "Andrea Gomez"
+
+    if promedio>=7:
+        condicion = "Promoción"
+        defensa = "NO"
+        examen = "NO"
+        fecha = "Directo"
+    elif promedio>=4:
+        condicion = "Regular"
+        defensa = "SI"
+        examen = "SI"
+        fecha = "10/07/2025"
+    elif promedio>=3:
+        condicion = "Libre"
+        defensa = "NO"
+        examen = "SI"
+        fecha = "14/07/2025"
+    else:
+        condicion = "Ausente"
+        defensa = "NO"
+        examen = "NO"
+        fecha = "Recursa"
     
+
 
     print("\nDATOS DEL ALUMNO:")
     print(f"Nombre: {nombre} {apellido}")
