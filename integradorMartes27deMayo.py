@@ -4,6 +4,30 @@ os.system("cls")
 # Programa principal
 ListaDePromedios = []
 
+#Cantidad de promocionados, regulares, libres y ausentes
+contPromo,contRegu,contLibres,contAus = 0,0,0,0
+
+#Cantidad de estudiantes por materia
+contIPL,contSist,contMath,contEngl = 0,0,0,0
+
+#Cantidad de promocionados por materia
+contPromoIPL,contPromoSist,contPromoMath,contPromoEngl = 0,0,0,0
+
+#Cantidad de regulares por materia
+contReguIPL,contReguSist,contReguMath,contReguEngl = 0,0,0,0
+
+#Cantidad de alumnos libres por materia
+contLibresIPL,contLibresSist,contLibresMath,contLibresEngl = 0,0,0,0
+
+#Cantidad de ausentes por materia
+contAusIPL,contAusSist,contAusMath,contAusEngl = 0,0,0,0
+
+#Cantidad de estudiantes según modalidad y materia
+contIPLPresencial,contIPLVirtual,contIPLMixta = 0,0,0
+contSistPresencial,contSistVirtual,contSistMixta = 0,0,0
+contMathPresencial,contMathPresencial,contMathMixta = 0,0,0
+contEnglPresencial,contEnglVirtual,contEnglMixta = 0,0,0
+#...
 cantidadDeAlumnos = int(input("Cantidad de alumnos: "))
 while cantidadDeAlumnos <= 0:
     print("Cantidad de alumnos no valida")
