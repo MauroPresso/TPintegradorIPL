@@ -39,6 +39,7 @@ for i in range(cantidadDeAlumnos):
 
     # GENERANDO DATOS.
 
+    # Definiendo la materia.
     if codigoDeMateria == 100:
         materia = "Introducción al pensamiento lógico"
         profesor = "Juan Perez"
@@ -52,6 +53,7 @@ for i in range(cantidadDeAlumnos):
         materia = "Inglés"
         profesor = "Andrea Gomez"
 
+    # Definiendo la condición del alumno.
     if promedio>=7:
         condicion = "Promoción"
         defensa = "NO"
@@ -73,13 +75,24 @@ for i in range(cantidadDeAlumnos):
         examen = "NO"
         fecha = "Recursa"
     
-
+    # Definiendo el tipo de modalidad.
+    if tipoDeModalidad == "V":
+        modalidad = "Virtual"
+    elif tipoDeModalidad == "P":
+        modalidad = "Presencial"
+    else:
+        modalidad = "Mixta"
 
     print("\nDATOS DEL ALUMNO:")
     print(f"Nombre: {nombre} {apellido}")
-    print(f"Codigo de materia: {codigoDeMateria}")
+    print(f"Materia: {materia}")
+    print(f"Profesor: {profesor}")
     print(f"Promedio: {promedio}")
-    print(f"Tipo de modalidad: {tipoDeModalidad}")
+    print(f"Condicion: {condicion}")
+    print(f"Defensa: {defensa}")
+    print(f"Examen: {examen}")
+    print(f"Fecha: {fecha}")
+    print(f"Modalidad: {modalidad}")
     print(f"Id: {id}")
     input("\nIngrese cualquier tecla para continuar...")
     os.system("cls")
