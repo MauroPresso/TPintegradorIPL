@@ -148,7 +148,84 @@ for i in range(cantidadDeAlumnos):
             aula = "Zoom"
             horario = "Jueves 19:00 a 20:30"
         
-
+    # Contadores
+    
+    # Contando alumnos por materia y modalidad. Inciso g).
+    if materia == "Introducción al pensamiento lógico":
+        contIPL += 1
+        if modalidad == "Presencial":
+            contIPLPresencial += 1
+        elif modalidad == "Virtual":
+            contIPLVirtual += 1
+        else: # modalidad == "Mixta"
+            contIPLMixta += 1
+    elif materia == "Sistemas de computación":
+        contSist += 1
+        if modalidad == "Presencial":
+            contSistPresencial += 1
+        elif modalidad == "Virtual":
+            contSistVirtual += 1
+        else: # modalidad == "Mixta"
+            contSistMixta += 1
+    elif materia == "Matemática":
+        contMath += 1
+        if modalidad == "Presencial":
+            contMathPresencial += 1
+        elif modalidad == "Virtual":
+            contMathVirtual += 1
+        else: # modalidad == "Mixta"
+            contMathMixta += 1
+    else: # materia == "Inglés"
+        contEngl += 1
+        if modalidad == "Presencial":
+            contEnglPresencial += 1
+        elif modalidad == "Virtual":
+            contEnglVirtual += 1
+        else: # modalidad == "Mixta"
+            contEnglMixta += 1
+    
+    # Contado por condicion y por materia.
+    if condicion == "Promoción":
+        contPromo += 1
+        if materia == "Introducción al pensamiento lógico":
+            contPromoIPL += 1
+        elif materia == "Sistemas de computación":
+            contPromoSist += 1
+        elif materia == "Matemática":
+            contPromoMath += 1
+        else: # materia == "Inglés"
+            contPromoEngl += 1
+    elif condicion == "Regular":
+        contRegu += 1
+        if materia == "Introducción al pensamiento lógico":
+            contReguIPL += 1
+        elif materia == "Sistemas de computación":
+            contReguSist += 1
+        elif materia == "Matemática":
+            contReguMath += 1
+        else: # materia == "Inglés"
+            contReguEngl += 1
+    elif condicion == "Libre":
+        contLibres += 1
+        if materia == "Introducción al pensamiento lógico":
+            contLibresIPL += 1
+        elif materia == "Sistemas de computación":
+            contLibresSist += 1
+        elif materia == "Matemática":
+            contLibresMath += 1
+        else: # materia== "Inglés"
+            contLibresEngl += 1
+    else: # condicion == "Ausente"
+        contAus += 1
+        if materia == "Introducción al pensamiento lógico":
+            contAusIPL += 1
+        elif materia == "Sistemas de computación":
+            contAusSist += 1
+        elif materia == "Matemática":
+            contAusMath += 1
+        else: # materia == "Inglés"
+            contAusEngl += 1
+    
     print("\nDATOS DEL ALUMNO:")
     print(f"Nombre: {nombre} {apellido}")
     print(f"Id: {id}")
