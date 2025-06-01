@@ -25,7 +25,7 @@ contAusIPL,contAusSist,contAusMath,contAusEngl = 0,0,0,0
 #Cantidad de estudiantes según modalidad y materia
 contIPLPresencial,contIPLVirtual,contIPLMixta = 0,0,0
 contSistPresencial,contSistVirtual,contSistMixta = 0,0,0
-contMathPresencial,contMathPresencial,contMathMixta = 0,0,0
+contMathPresencial,contMathVirtual,contMathMixta = 0,0,0
 contEnglPresencial,contEnglVirtual,contEnglMixta = 0,0,0
 #...
 cantidadDeAlumnos = int(input("Cantidad de alumnos: "))
@@ -165,6 +165,69 @@ for i in range(cantidadDeAlumnos):
     input("\nIngrese cualquier tecla para continuar...")
     os.system("cls")
 
-print("\nLISTA DE PROMEDIOS:")
+print("\nREPORTE FINAL:")
+
+# Inciso b)
+print(f"\n\n\nTotal de alumnos por materia:")
+print(f"\nIntroducción al pensamiento lógico: {contIPL}")
+print(f"Sistemas de computación: {contSist}")
+print(f"Matemática: {contMath}")
+print(f"Inglés: {contEngl}")
+
+# Inciso g)
+print(f"\n\n\nTotal de alumnos por modalidad y materia:")
+print("\nIntroducción al pensamiento lógico:")
+print(f"Presencial: {contIPLPresencial}")
+print(f"Virtual: {contIPLVirtual}")
+print(f"Mixta: {contIPLMixta}")
+print("\n\nSistemas de computación:")
+print(f"\nPresencial: {contSistPresencial}")
+print(f"Virtual: {contSistVirtual}")
+print(f"Mixta: {contSistMixta}")
+print("\n\nMatemática:")
+print(f"\nPresencial: {contMathPresencial}")
+print(f"Virtual: {contMathVirtual}")
+print(f"Mixta: {contMathMixta}")
+print("\n\nInglés:")
+print(f"\nPresencial: {contEnglPresencial}")
+print(f"Virtual: {contEnglVirtual}")
+print(f"Mixta: {contEnglMixta}")
+
+# Inciso a)
+print(f"\n\n\nTotal de alumnos por condición:")
+print(f"\nTotal de alumnos promocionados: {contPromo}")
+print(f"Total de alumnos regulares: {contRegu}")
+print(f"Total de alumnos libres: {contLibres}")
+print(f"Total de alumnos ausentes: {contAus}")
+
+# Inciso c)
+print(f"\n\n\nTotal de alumnos promocionados por materia:")
+print(f"\nIntroducción al pensamiento lógico: {contPromoIPL}")
+print(f"Sistemas de computación: {contPromoSist}")
+print(f"Matemática: {contPromoMath}")
+print(f"Inglés: {contPromoEngl}")
+
+# Inciso d)
+print(f"\n\n\nTotal de alumnos regulares por materia:")
+print(f"\nIntroducción al pensamiento lógico: {contReguIPL}")
+print(f"Sistemas de computación: {contReguSist}")
+print(f"Matemática: {contReguMath}")
+print(f"Inglés: {contReguEngl}")
+
+# Inciso e)
+print(f"\n\n\nTotal de alumnos libres por materia:")
+print(f"\nIntroducción al pensamiento lógico: {contLibresIPL}")
+print(f"Sistemas de computación: {contLibresSist}")
+print(f"Matemática: {contLibresMath}")
+print(f"Inglés: {contLibresEngl}")
+
+# Inciso f)
+print(f"\n\n\nTotal de alumnos ausentes por materia:")
+print(f"\nIntroducción al pensamiento lógico: {contAusIPL}")
+print(f"Sistemas de computación: {contAusSist}")
+print(f"Matemática: {contAusMath}")
+print(f"Inglés: {contAusEngl}")
+
+print("\n\n\nLISTA DE PROMEDIOS:")
 for i in range(cantidadDeAlumnos):
     print(f"Promedio del alumno {i+1}: {ListaDePromedios[i]}")
