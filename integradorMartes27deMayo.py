@@ -9,17 +9,17 @@ while cantidadDeAlumnos <= 0:
     print("Cantidad de alumnos no valida")
     cantidadDeAlumnos = int(input("Cantidad de alumnos: "))
 
-print("\nIngrese los datos de los alumnos: ")
+print("\n\nIngrese los datos de los alumnos: ")
 for i in range(cantidadDeAlumnos):
     id = i + 1
 
-    nombre = input("\nNombre del alumno: ").capitalize()
+    nombre = input("\n\nNombre del alumno: ").capitalize()
     apellido = input("Apellido del alumno: ").upper()
     
-    codigoDeMateria = int(input("Ingrese el código de la materia\n100: Introducción al pensamiento lógico\n200: Sistemas de computación\n300: Matemática\n400: Inglés\nIngrese aquí:\t"))
+    codigoDeMateria = int(input("\nIngrese el código de la materia\n100: Introducción al pensamiento lógico\n200: Sistemas de computación\n300: Matemática\n400: Inglés\nIngrese aquí: "))
     while codigoDeMateria not in [100, 200, 300, 400]:
         print("Dato erroneo. Intente nuevamente")
-        codigoDeMateria = int(input("Ingrese el código de la materia\n100: Introducción al pensamiento lógico\n200: Sistemas de computación\n300: Matemática\n400: Inglés\nIngrese aquí:\t"))
+        codigoDeMateria = int(input("\nIngrese el código de la materia\n100: Introducción al pensamiento lógico\n200: Sistemas de computación\n300: Matemática\n400: Inglés\nIngrese aquí: "))
 
     print("\nIngrese las notas del alumno (1 a 10): ")
     sumaNotas = 0
