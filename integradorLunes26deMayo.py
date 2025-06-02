@@ -5,7 +5,7 @@ os.system("cls")
 listaDePromedios = []
 listaDeApellidos = []
 listaDeCondicion = []
-cantidadDeEstudiantes = 2
+cantidadDeEstudiantes = 5
 cantidadDeNotas = 3
 print(f"\n\nIngrese los datos de los {cantidadDeEstudiantes} estudiantes: ")
 for i in range(cantidadDeEstudiantes):
